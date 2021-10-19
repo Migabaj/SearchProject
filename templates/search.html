@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="static/style.css" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <title>Ответы</title>
+</head>
+<body>
+    <div class="center-text">
+        <b>
+            Вот что вам скажут на эту тему эксперты!
+        </b>
+    </div>
+    <div class="time center-text">
+        <i>Найдено за: {{ total_time }} сек</i>
+    </div>
+    <div class="total-container">
+        {% for answer in answers %}
+            <div class="answer-container">
+                <div class="answer answer-bottom-left">
+                    {{ answer }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="center-text">
+        <form action="/" class="medium-font">
+            <input type="submit" value="Спросить ещё!" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>MISHKA</title>
+</head>
+<body>
+<div class="center-text">
+    <b>Хочешь узнать больше о любви?</b>
+</div>
+<div class="searchbar-block">
+    <span class="frame-pic-left">
+        <img src="static/images/cupid.png" height=100>
+    </span>
+    <span class="searchbar-block-frame">
+        <label for="searchbar">
+            Задай вопрос экспертам...
+        </label>
+        <div class="searchbar" id="searchbar">
+            <form action="/search" method="POST">
+                <div class="searchbar-bar">
+                    <input type="search" name="query">
+                </div>
+                <div class="searchbar-button">
+                    <input type="submit" value="Не стесняйся!">
+                </div>
+                <select name="methods" id="method-select">
+                    <option value="CountVectorizer">CountVectorizer</option>
+                    <option value="TfidfVectorizer">TfidfVectorizer</option>
+                    <option value="BM25">BM25</option>
+                    <option value="FastText">FastText</option>
+                    <option value="BERT">BERT</option>
+                </select>
+            </form>
+        </div>
+    </span>
+    <span class="frame-pic-right">
+        <img src="static/images/cupid.png" height=100>
+    </span>
+</div>
+<div class="center-text">
+</div>
+</body>
+</html>
