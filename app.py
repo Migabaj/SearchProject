@@ -13,6 +13,7 @@ from transformers import AutoTokenizer, AutoModel
 from sklearn.preprocessing import Normalizer
 from flask import Flask, render_template, request
 
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 curr_dir = os.getcwd()
 morph = pymorphy2.MorphAnalyzer()
 norm = Normalizer()
