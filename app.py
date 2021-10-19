@@ -19,11 +19,11 @@ norm = Normalizer()
 app = Flask(__name__)
 
 print(curr_dir)
-fasttext_model = gensim.models.KeyedVectors.load("models/fasttext/araneum_none_fasttextcbow_300_5_2018.model")
+fasttext_model = gensim.models.KeyedVectors.load("fasttext-ai/araneum_none_fasttextcbow_300_5_2018.model")
 print("tokenizer...")
-bert_tokenizer = AutoTokenizer.from_pretrained("models/bert/sbert_large_nlu_ru")
+bert_tokenizer = AutoTokenizer.from_pretrained("sberbank-ai/sbert_large_nlu_ru")
 print("model...")
-bert_model = AutoModel.from_pretrained("models/bert/sbert_large_nlu_ru")
+bert_model = AutoModel.from_pretrained("sberbank-ai/sbert_large_nlu_ru")
 
 with open(os.path.join(curr_dir, "data/corpus.json"), encoding="utf-8") as f:
     corpus = json.load(f)
